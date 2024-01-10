@@ -135,7 +135,7 @@ example
 Authorization 
 Bearer Token <token>
 
-# Log out User
+#Log out User
 
 method - POST 
 ```bash
