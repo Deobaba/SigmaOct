@@ -33,7 +33,7 @@ Route.group(()=>{
   Route.post("/auth/register", "AuthController.register");
   Route.get("/user", "AuthController.viewUser").middleware("auth:api");
   Route.post("auth/logout", "AuthController.logout").middleware("auth:api");
-  Route.get("/user/:id", "AuthController.adminViewUser").middleware(["auth:api", "AdminMiddleware"]);
+  Route.get("/viewuser/:id", "AuthController.adminViewUser").middleware(["auth:api", "AdminMiddleware"]);
   
 }).prefix("/api")
 
