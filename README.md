@@ -30,6 +30,20 @@ or
     yarn install
   
 ```
+add environment file .env
+```bash
+PORT=3333
+HOST=0.0.0.0
+NODE_ENV=development
+APP_KEY=y3mcFU3HdqpCNEeoRoqUvjzaI0t12zW9
+DRIVE_DISK=local
+DB_CONNECTION=pg
+PG_HOST=
+PG_PORT=
+PG_USER=
+PG_PASSWORD=
+PG_DB_NAME=
+```
 
     
 ## Run App
