@@ -1,15 +1,3 @@
-REST API using AdonisJs, focusing on the following features:
-
-User can register
-User can login
-User can view profile
-Admin can register
-Admin can login
-Admin can view Users
-Please note that the implementation should incorporate JWT (JSON Web
-Tokens) for authentication.
-
-
 
 # SigmaOct 
 
@@ -103,6 +91,5 @@ Bearer Token <token>
 ## Documentation
 
 Extensive [Documentation](https://documenter.getpostman.com/view/27540447/2s9YsKhCrr#0c658f0c-a33b-4a54-b37c-7cdaf78e8958)
-
 
 
