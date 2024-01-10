@@ -27,7 +27,7 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
-Route.group(()=>{
+
 
   Route.post('/auth/login', 'AuthController.login')
   Route.post("/auth/register", "AuthController.register");
@@ -35,7 +35,7 @@ Route.group(()=>{
   Route.post("auth/logout", "AuthController.logout").middleware("auth:api");
   Route.get("/viewuser/:id", "AuthController.adminViewUser").middleware(["auth:api", "AdminMiddleware"]);
   
-}).prefix("/api")
+
 
 // Route.post('/auth/login', 'AuthController.login')
 // Route.post("/auth/register", "AuthController.register");
