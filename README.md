@@ -28,7 +28,7 @@ node ace serve
 
 #Register
 
-POST 
+Method - POST 
 
 https://sigmaoct-restapi.onrender.com/auth/register
 
@@ -39,7 +39,7 @@ example
 {
     "username":"deobaba",
     "email":"abcde@gmail.com",
-    "user_type":"user"
+    "user_type":"user",
     "password":"1234567",
     "password_confirmation":"1234567"
 }
@@ -47,7 +47,7 @@ example
 
 #Login 
 
-POST
+Method - POST
 
 https://sigmaoct-restapi.onrender.com/auth/Login
 
@@ -62,6 +62,7 @@ example
 
 
 #View User
+
 Method - GET
 
 https://sigmaoct-restapi.onrender.com/user
@@ -73,8 +74,11 @@ example
 Authorization 
 Bearer Token <token>
 
+
 #Admin View User
+
 method - GET 
+
 https://sigmaoct-restapi.onrender.com/view-user/1
 
 only admin is authorized to access this endpoint and the user id is passes as params 
