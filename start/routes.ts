@@ -27,8 +27,18 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
-Route.post('/auth/login', 'AuthController.login')
-Route.post("/auth/register", "AuthController.register");
-Route.get("/user", "AuthController.viewUser").middleware("auth:api");
-Route.post("auth/logout", "AuthController.logout").middleware("auth:api");
-Route.get("/user/:id", "AuthController.adminViewUser").middleware(["auth:api", "AdminMiddleware"]);
+Route.group(()=>{
+
+  Route.post('/auth/login', 'AuthController.login')
+  Route.post("/auth/register", "AuthController.register");
+  Route.get("/user", "AuthController.viewUser").middleware("auth:api");
+  Route.post("auth/logout", "AuthController.logout").middleware("auth:api");
+  Route.get("/user/:id", "AuthController.adminViewUser").middleware(["auth:api", "AdminMiddleware"]);
+  
+}).prefix("/api")
+
+// Route.post('/auth/login', 'AuthController.login')
+// Route.post("/auth/register", "AuthController.register");
+// Route.get("/user", "AuthController.viewUser").middleware("auth:api");
+// Route.post("auth/logout", "AuthController.logout").middleware("auth:api");
+// Route.get("/user/:id", "AuthController.adminViewUser").middleware(["auth:api", "AdminMiddleware"]);
