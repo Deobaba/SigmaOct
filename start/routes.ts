@@ -32,7 +32,7 @@ Route.get('/', async () => {
   Route.post('/auth/login', 'AuthController.login')
   Route.post("/auth/register", "AuthController.register");
   Route.get("/user", "AuthController.viewUser").middleware("auth:api");
-  Route.post("auth/logout", "AuthController.logout").middleware("auth:api");
+  Route.post("/auth/logout", "AuthController.logout").middleware("auth:api");
   Route.get("/view-user/:id", "AuthController.adminViewUser").middleware(["auth:api", "AdminMiddleware"]);
   
 
