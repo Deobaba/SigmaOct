@@ -43,6 +43,7 @@ PG_PORT=
 PG_USER=
 PG_PASSWORD=
 PG_DB_NAME=
+secretKey = 
 ```
 
     
@@ -66,7 +67,7 @@ https://sigmaoct-restapi.onrender.com/auth/register
 
 ```
 
-this endpoint regiters user [user, admin], the default usertype is [user].
+this endpoint regiters user [user, admin], the user type must be passed user/admin.
 
 example
 
@@ -81,6 +82,20 @@ example
 }
 
 ```
+or
+
+```bash
+
+{
+    "username":"deobaba",
+    "email":"abcde@gmail.com",
+    "user_type":"admin",
+    "password":"1234567",
+    "password_confirmation":"1234567"
+}
+
+```
+
 
 
 #Login 
@@ -134,22 +149,6 @@ example
 
 Authorization 
 Bearer Token <token>
-
-#Log out User
-
-method - POST 
-```bash
-https://sigmaoct-restapi.onrender.com/auth/logout
-```
-this endpoint logs out user and clears their token
-
-example
-
-Authorization 
-Bearer Token <token>
-
-
-
 
 
 ## Documentation

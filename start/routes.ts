@@ -19,6 +19,7 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
+// import { Query } from 'mongoose';
 
 
 
@@ -35,13 +36,10 @@ Route.get('/', async () => {
   Route.post("/auth/register", "AuthController.register");
 
   // route to view user [user,admin]
-  Route.get("/user", "AuthController.viewUser").middleware("auth:api");
-
-  // logout
-  Route.post("/auth/logout", "AuthController.logout").middleware("auth:api");
+  Route.get("/user", "AuthController.viewUser").middleware("verifyToken");
 
   // route accessible to only admin
-  Route.get("/view-user/:id", "AuthController.adminViewUser").middleware(["auth:api", "AdminMiddleware"]);
+  Route.get("/view-user/:id", "AuthController.adminViewUser").middleware(["verifyToken", "AdminMiddleware"]);
   
 
 

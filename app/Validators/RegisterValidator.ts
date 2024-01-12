@@ -49,4 +49,7 @@ export default class RegisterValidator {
     "name.required": "{{field}} field is required.",
     "password.required": "{{field}} field is required.",
   };
+
+ 
+
 }
