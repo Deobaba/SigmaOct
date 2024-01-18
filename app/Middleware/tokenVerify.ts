@@ -61,7 +61,7 @@ let token;
       if(id){
         const getUser = await User.find(id)
         if(!getUser){
-          return response.status(404).jsn({
+          return response.status(404).json({
             succes:false,
             message:`no user with this id ${id}`
           })
