@@ -38,12 +38,12 @@ NODE_ENV=development
 APP_KEY=y3mcFU3HdqpCNEeoRoqUvjzaI0t12zW9
 DRIVE_DISK=local
 DB_CONNECTION=pg
-PG_HOST=
-PG_PORT=
-PG_USER=
-PG_PASSWORD=
-PG_DB_NAME=
-secretKey = 
+PG_HOST=db.raolzrwtbiukozfoniok.supabase.co
+PG_PORT=5432
+PG_USER=postgres
+PG_PASSWORD=FQRQpM23jpp4X6it
+PG_DB_NAME=postgres
+secretKey = qwertymnjkcxsss
 ```
 
     
